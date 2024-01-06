@@ -10,13 +10,11 @@ At the moment this script expects a file named `source.svg` and outputs 4 files:
 
 So far, it accepts no parameters and all files are expected/kept in the top folder of this project.
 
-# Installation
+### Installation
 
-    npm install
+    pnpm install
 
-or equivalent (pnpm i, bun i, yarn i...)
-
-# Execution
+### Execution
 
 We provide a default `source.svg` file that you should replace with your own.
 

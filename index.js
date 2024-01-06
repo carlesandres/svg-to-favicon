@@ -2,11 +2,11 @@ import fs from 'node:fs/promises';
 import svgToImg from 'svg-to-img';
 import pngToIco from 'png-to-ico';
 import chalk from 'chalk';
+import { input } from '@inquirer/prompts';
 
 const savePng = async (file, size, fileName) => {
   console.log(chalk.blue('Saving PNG size: ' + size));
   const buffer = await svgToImg.from(file).toPng({ width: size, height: size });
-  console.log(chalk.blue('Saving PNG...'));
   fileName = fileName || `output-${size}`;
   fileName += '.png';
   await fs.writeFile(fileName, buffer);
@@ -15,9 +15,12 @@ const savePng = async (file, size, fileName) => {
 
 
 (async () => {
+  let sourceFile = await input({ message: 'Name of the source file? (leave empty for source.svg)' });
+  sourceFile = sourceFile || 'source.svg';
+
   // Convert SVG to PNG
-  console.log(chalk.blue('Reading file...'));
-  const file = await fs.readFile('source.svg')
+  console.log(chalk.blue(`Reading "${sourceFile}"...`));
+  const file = await fs.readFile(sourceFile);
   console.log(chalk.blue('Converting file to PNG...'));
 
   // 512
