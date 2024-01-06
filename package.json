@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Create favicons from SVG files",
   "main": "index.js",
+  "repository": "carlesandres/svg-to-favicon",
   "type": "module",
   "scripts": {
     "start": "node index.js",

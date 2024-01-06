@@ -1,7 +1,7 @@
 # SVG to Favicon
 ## SVG to Favicon converter
 
-At the moment this script expects a file named `source.svg` and outputs 4 files:
+At the moment this script expects a file named `logo.svg` and outputs 4 files:
 
 - android-chrome-192x192.png
 - android-chrome-512x512.png

@@ -15,8 +15,8 @@ const savePng = async (file, size, fileName) => {
 
 
 (async () => {
-  let sourceFile = await input({ message: 'Name of the source file? (leave empty for source.svg)' });
-  sourceFile = sourceFile || 'source.svg';
+  let sourceFile = await input({ message: 'Name of the source file? (leave empty for logo.svg)' });
+  sourceFile = sourceFile || 'logo.svg';
 
   // Convert SVG to PNG
   console.log(chalk.blue(`Reading "${sourceFile}"...`));
