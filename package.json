@@ -1,14 +1,15 @@
 {
-  "name": "png-to-ico",
-  "version": "1.0.0",
-  "description": "",
+  "name": "svg-to-favicon",
+  "version": "0.0.1",
+  "description": "Create favicons from SVG files",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["favicon", "svg", "png", "ico", "image"],
+  "author": "Carles Andrés",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
